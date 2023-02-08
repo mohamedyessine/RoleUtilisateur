@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -41,11 +42,14 @@ public class User {
     public User() {
     }
 
-    public User(String username, String email, String password) {
+    public User( String username, String email, String password) {
+
         this.username = username;
         this.email = email;
         this.password = password;
+
     }
+
 
     public Long getId() {
         return id;
